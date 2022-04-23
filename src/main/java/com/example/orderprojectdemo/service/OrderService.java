@@ -6,5 +6,5 @@ public interface OrderService {
 
     List<Integer> get();
 
-    void add(List<Integer> id);
+    List<Integer> add(List<Integer> id);
 }

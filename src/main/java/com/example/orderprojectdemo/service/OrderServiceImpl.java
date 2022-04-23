@@ -9,7 +9,7 @@ import java.util.List;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    Order order;
+    private final Order order;
 
     @Autowired
     public OrderServiceImpl(Order order) {
@@ -22,7 +22,7 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public void add(List<Integer> id) {
-        order.setId(id);
+    public List<Integer> add(List<Integer> id) {
+        return order.addId(id);
     }
 }
